@@ -22,7 +22,9 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 
-# dotfiles git repository
+# dot config git management
 alias dotcfg='/usr/bin/git --git-dir=/home/ben/dotfiles --work-tree=/home/ben'
+
+alias fortune='fortune | cowsay -f (exa /usr/share/cowsay | shuf -n 1) | lolcat'
 
 neofetch
