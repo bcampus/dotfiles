@@ -7,7 +7,7 @@ set -q XDG_DATA_HOME
 source $OMF_PATH/init.fish
 
 set EDITOR "kak"
-
+set XDG_CONFIG_HOME "$HOME/.config"
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -27,5 +27,4 @@ alias dotcfg='/usr/bin/git --git-dir=/home/ben/dotfiles --work-tree=/home/ben'
 
 alias fortune='fortune | cowsay -f (exa /usr/share/cowsay | shuf -n 1) | lolcat'
 
-set theme_color_scheme solarized
 neofetch
