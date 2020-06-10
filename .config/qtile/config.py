@@ -67,6 +67,10 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
 
+    # Screen brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("setBrightness +5"), desc="Brightness up"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("setBrightness -5"), desc="Brightness down"),
+
     # *** PROGRAM SHORTCUTS ***
     Key([mod, "control"], "w", lazy.spawn(defaultWebBrowser), desc="Start web browser"),
     Key([mod, "control"], "f", lazy.spawn(defaultFileManager), desc="File manager"),
@@ -115,6 +119,8 @@ foregrounds = [
     ["#FF5555", "#FF5555"],  # 04 Volume Colour
     ["#F1FA8C", "#F1FA8C"],  # 05 CPU_Temp Colour
     ["#50FA7A", "#50FA7A"],  # 06 Updates Colour
+    ["#8BE9FD", "#8BE9FD"],  # 07 Battery
+    ["#AE81FF", "#AE81FF"],  # 08 Backlight
 ]
 
 backgrounds = [
@@ -125,6 +131,8 @@ backgrounds = [
     ["#2E1818", "#2E1818"],  # 04 Volume Colour
     ["#3E4029", "#3E4029"],  # 05 CPU_Temp Colour
     ["#233127", "#233127"],  # 06 Updates
+    ["#26383C", "#26383C"],  # 07 Battery
+    ["#342947", "#342947"],  # 08 Backlight
 ]
 
 borders = [
@@ -207,6 +215,53 @@ screens = [
                 widget.WindowName(
                     padding=450,
                     foreground=foregrounds[1],
+                ),
+                widget.Sep(
+                    linewidth=0,
+                    padding=10,
+                    background=backgrounds[8],
+                ),
+                widget.TextBox(
+                    text="🔋",
+                    padding=0,
+                    foreground=foregrounds[8],
+                    background=backgrounds[8],
+                ),
+                widget.Battery(
+                    format="{char} {percent:2.0%}  {watt:.2f} W",
+                    charge_char="🠕",
+                    discharge_char="🠗",
+                    padding=0,
+                    foreground=foregrounds[8],
+                    background=backgrounds[8],
+                ),
+                widget.Sep(
+                    linewidth=0,
+                    padding=10,
+                    background=backgrounds[8],
+                ),
+                widget.Sep(
+                    linewidth=0,
+                    padding=10,
+                    background=backgrounds[7],
+                ),
+                widget.TextBox(
+                    text="☀️",
+                    padding=0,
+                    foreground=foregrounds[7],
+                    background=backgrounds[7],
+                ),
+                widget.Backlight(
+                   backlight_name="intel_backlight",
+                   brightness_file="brightness",
+                   padding=0,
+                   foreground=foregrounds[7],
+                   background=backgrounds[7],
+                ),
+                widget.Sep(
+                    linewidth=0,
+                    padding=10,
+                    background=backgrounds[7],
                 ),
                 widget.CheckUpdates(
                     display_format="🠕 {updates}",
