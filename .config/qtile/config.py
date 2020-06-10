@@ -205,24 +205,9 @@ screens = [
                     background=backgrounds[0]
                 ),
                 widget.WindowName(
-                    padding=800,
+                    padding=450,
                     foreground=foregrounds[1],
                 ),
-                # widget.Sep(
-                #     linewidth=0,
-                #     padding=8,
-                #     background=colors[4]
-                # ),
-                # widget.TextBox(
-                #     text="🖧",
-                #     padding=0,
-                #     background=colors[4],
-                # ),
-                # widget.Net(
-                #     padding=10,
-                #     background=colors[4],
-                #     format="{down} ↓↑ {up}"
-                # )
                 widget.CheckUpdates(
                     display_format="🠕 {updates}",
                     distro="Fedora",
@@ -250,32 +235,6 @@ screens = [
                     padding=6,
                     tag_sensor="Package id 0"
                 ),
-                #  widget.CPU(
-                #      background=colors[5],
-                #      padding=6,
-                #      format="{freq_current} GHz   {load_percent}%",
-                #      update_interval=2.0,
-                #  ),
-                #   widget.Sep(
-                #       linewidth=0,
-                #       padding=6,
-                #       background=colors[4]
-                #   ),
-                # widget.TextBox(
-                #     text="☀️",
-                #     background=colors[4]
-                # ),
-                # widget.Backlight(
-                #     backlight_name="intel_backlight",
-                #     brightness_file="brightness",
-                #     padding=4,
-                #     background=colors[4]
-                # ),
-                # widget.Sep(
-                #     linewidth=0,
-                #     padding=6,
-                #     background=colors[4]
-                # ),
                 widget.TextBox(
                     text="🕩",
                     background=backgrounds[4],
@@ -292,27 +251,6 @@ screens = [
                     background=backgrounds[4],
                     foreground=foregrounds[4],
                 ),
-                # widget.Sep(
-                #     linewidth=0,
-                #     padding=6,
-                #     background=colors[4]
-                # ),
-                # widget.TextBox(
-                #     text="🔋",
-                #     background=colors[4]
-                # ),
-                # widget.Battery(
-                #     background=colors[4],
-                #     padding=4,
-                #     format="{char} {percent:2.0%}  {watt:.2f} W",
-                #     charge_char="🠕",
-                #     discharge_char="🠗"
-                # ),
-                # widget.Sep(
-                #     linewidth=0,
-                #     padding=6,
-                #     background=colors[4]
-                # ),
                 widget.Clock(
                     format='%a %d %b %Y  %I:%M:%S %p',
                     padding=16,
@@ -322,66 +260,7 @@ screens = [
             ],
             24,
         ),
-    ),
-    Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayoutIcon(
-                    scale=0.7,
-                    custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
-                    padding=4,
-                    foreground=foregrounds[2],
-                    background=backgrounds[2],
-                ),
-                widget.CurrentLayout(
-                    padding=4,
-                    foreground=foregrounds[2],
-                    background=backgrounds[2],
-                ),
-                widget.Sep(
-                    padding=4,
-                    linewidth=0,
-                    foreground=foregrounds[2],
-                    background=backgrounds[2],
-                ),
-                widget.Sep(
-                    padding=8,
-                    linewidth=0,
-                ),
-                widget.GroupBox(
-                    font="Ubuntu",
-                    fontsize=12,
-                    margin_y=3,
-                    margin_x=0,
-                    padding_y=5,
-                    padding_x=5,
-                    borderwidth=3,
-                    active=foregrounds[2],
-                    inactive=foregrounds[2],
-                    rounded=False,
-                    highlight_color=backgrounds[1],
-                    highlight_method="line",
-                    this_current_screen_border=borders[0],
-                    this_screen_border=borders[1],
-                    other_current_screen_border=backgrounds[0],
-                    other_screen_border=backgrounds[0],
-                    foreground=foregrounds[2],
-                    background=backgrounds[0]
-                ),
-                widget.WindowName(
-                    padding=800,
-                    foreground=foregrounds[1],
-                ),
-                widget.Clock(
-                    format='%a %d %b %Y  %I:%M:%S %p',
-                    padding=16,
-                    background=backgrounds[3],
-                    foreground=foregrounds[3],
-                ),
-            ],
-            24,
-        )
-    ),
+    ), 
 ]
 
 # Drag floating layouts.
