@@ -205,7 +205,7 @@ screens = [
                     background=backgrounds[0]
                 ),
                 widget.WindowName(
-                    padding=800,
+                    padding=450,
                     foreground=foregrounds[1],
                 ),
                 widget.CheckUpdates(
@@ -260,66 +260,7 @@ screens = [
             ],
             24,
         ),
-    ),
-    Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayoutIcon(
-                    scale=0.7,
-                    custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
-                    padding=4,
-                    foreground=foregrounds[2],
-                    background=backgrounds[2],
-                ),
-                widget.CurrentLayout(
-                    padding=4,
-                    foreground=foregrounds[2],
-                    background=backgrounds[2],
-                ),
-                widget.Sep(
-                    padding=4,
-                    linewidth=0,
-                    foreground=foregrounds[2],
-                    background=backgrounds[2],
-                ),
-                widget.Sep(
-                    padding=8,
-                    linewidth=0,
-                ),
-                widget.GroupBox(
-                    font="Ubuntu",
-                    fontsize=12,
-                    margin_y=3,
-                    margin_x=0,
-                    padding_y=5,
-                    padding_x=5,
-                    borderwidth=3,
-                    active=foregrounds[2],
-                    inactive=foregrounds[2],
-                    rounded=False,
-                    highlight_color=backgrounds[1],
-                    highlight_method="line",
-                    this_current_screen_border=borders[0],
-                    this_screen_border=borders[1],
-                    other_current_screen_border=backgrounds[0],
-                    other_screen_border=backgrounds[0],
-                    foreground=foregrounds[2],
-                    background=backgrounds[0]
-                ),
-                widget.WindowName(
-                    padding=800,
-                    foreground=foregrounds[1],
-                ),
-                widget.Clock(
-                    format='%a %d %b %Y  %I:%M:%S %p',
-                    padding=16,
-                    background=backgrounds[3],
-                    foreground=foregrounds[3],
-                ),
-            ],
-            24,
-        )
-    ),
+    ), 
 ]
 
 # Drag floating layouts.
