@@ -13,6 +13,10 @@ settings:
       w: session-save
       wq: quit --save
       wqa: quit --save
+  auto_save.interval:
+    global: 15000
+  auto_save.session:
+    global: false
   bindings.commands:
     global:
       normal:
@@ -26,6 +30,12 @@ settings:
         xx: config-cycle statusbar.hide ;; config-cycle tabs.show always switching
   content.media_capture:
     https://meet.google.com: true
+  content.notifications:
+    https://meet.google.com: false
+  editor.command:
+    global:
+    - kakopen
+    - '{file}'
   statusbar.hide:
     global: false
   tabs.show:
