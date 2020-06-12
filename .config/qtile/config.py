@@ -69,10 +69,12 @@ keys = [
 
     # *** PROGRAM SHORTCUTS ***
     Key([mod, "control"], "w", lazy.spawn(defaultWebBrowser), desc="Start web browser"),
-    Key([mod, "control"], "f", lazy.spawn(defaultFileManager), desc="File manager"),
+    Key([mod, "shift", "control"], "w", lazy.spawn("google-chrome"), desc="Start chrome"),
+    Key([mod, "control"], "f", lazy.spawn(terminal + " -e 'vifm /home/ben'"), desc="vifm"),
+    Key([mod, "shift", "control"], "f", lazy.spawn(defaultFileManager), desc="File manager"),
     Key([mod, "control"], "e", lazy.spawn(defaultEmailClient), desc="Start email client"),
-    Key([mod, "control"], "h", lazy.spawn(terminal + " -e htop"), desc="Start email client"),
-
+    Key([mod, "control"], "h", lazy.spawn(terminal + " -e htop"), desc="Start htop"),
+    Key([mod, "control"], "r", lazy.spawn(terminal + " -e tuir"), desc="Start reddit"),
 ]
 
 groupNames = [("DEV", "1"),
@@ -80,7 +82,8 @@ groupNames = [("DEV", "1"),
               ("WB2", "3"),
               ("DOC", "4"),
               ("RND", "5"),
-              ("MSC", "6")]
+              ("MSC", "6"),
+              ]
 
 groups = [Group(name) for name, key in groupNames]
 
