@@ -137,12 +137,12 @@ layouts = [
     layout.Max(**layout_theme),
     # layout.Stack(**layout_theme, num_stacks=2),
     # Try more layouts by unleashing below layouts.
-    # layout.Bsp(**layout_theme),
+    layout.Bsp(**layout_theme),
     # layout.Columns(**layout_theme),
     # layout.Matrix(**layout_theme),
 
     # layout.MonadWide(**layout_theme),
-    layout.RatioTile(**layout_theme),
+    # layout.RatioTile(**layout_theme),
     # layout.Tile(**layout_theme),
     # layout.TreeTab(**layout_theme),
     # layout.VerticalTile(**layout_theme),
