@@ -71,6 +71,8 @@ keys = [
     Key([mod, "control"], "w", lazy.spawn(defaultWebBrowser), desc="Start web browser"),
     Key([mod, "control"], "f", lazy.spawn(defaultFileManager), desc="File manager"),
     Key([mod, "control"], "e", lazy.spawn(defaultEmailClient), desc="Start email client"),
+    Key([mod, "control"], "h", lazy.spawn(terminal + " -e htop"), desc="Start email client"),
+
 ]
 
 groupNames = [("DEV", "1"),
