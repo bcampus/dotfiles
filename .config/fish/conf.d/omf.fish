@@ -27,4 +27,7 @@ alias dot='/usr/bin/git --git-dir=/home/ben/dotfiles --work-tree=/home/ben'
 
 alias fortune='fortune | cowsay -f (exa /usr/share/cowsay | shuf -n 1) | lolcat'
 
+# curl programs
+alias weather='curl v2.wttr.in'
+
 neofetch
