@@ -67,6 +67,9 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
 
+    # Rofi scripts
+    Key([mod, "mod1"], "w", lazy.spawn("rofiweb"), desc="Run rofi web script"),
+
     # *** PROGRAM SHORTCUTS ***
     Key([mod, "control"], "w", lazy.spawn(defaultWebBrowser), desc="Start web browser"),
     Key([mod, "shift", "control"], "w", lazy.spawn("google-chrome"), desc="Start chrome"),
