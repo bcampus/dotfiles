@@ -1,0 +1,27 @@
+#!/bin/python3.8
+import os
+
+def get_bookmarks():
+    atags = os.popen("cat ~/.config/qutebrowser/html/homepage.html | grep '<a class'").read().split("\n")
+    bookmarkList = []
+    namelist = []
+    namelistStr = "Home\n"
+    atags.remove("")
+    for tag in atags:
+        substring = (tag[tag.index("href=") + 6:])
+        href = substring[:substring.index("\"")]
+        name = substring[substring.index(">")+1:substring.index("<")]
+        namelistStr += name +"\n"
+        namelist.append(name)
+        bookmarkList.append(href)
+    return namelistStr, namelist, bookmarkList
+
+nameListStr,  nameList, bookmarkList = get_bookmarks()
+stream = os.popen("echo '" + nameListStr + "' | rofi -dmenu", )
+result = stream.read().replace("\n", "")
+if nameList.__contains__(result):
+    os.popen("qutebrowser " + bookmarkList[nameList.index(result)])
+elif result == "Home":
+    os.popen("qutebrowser")
+elif result != "":
+    os.popen("qutebrowser '" + result + "'")
