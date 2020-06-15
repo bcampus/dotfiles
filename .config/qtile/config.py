@@ -70,6 +70,9 @@ keys = [
     # Screen brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("setBrightness +5"), desc="Brightness up"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("setBrightness -5"), desc="Brightness down"),
+    
+    # Rofi scripts
+    Key([mod, "mod1"], "w", lazy.spawn("rofiweb"), desc="Run rofi web script"),
 
     # *** PROGRAM SHORTCUTS ***
     Key([mod, "control"], "w", lazy.spawn(defaultWebBrowser), desc="Start web browser"),

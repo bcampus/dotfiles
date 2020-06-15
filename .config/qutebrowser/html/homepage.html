@@ -96,7 +96,7 @@
         document.getElementById("search-field").addEventListener("keydown",  event => { 
             if (event.keyCode === 13) {
                 var val = document.getElementById("search-field").value;
-                window.open("https://google.com/search?q=" + val);
+                window.open("https://ecosia.org/search?q=" + val, "_self");
             }
         });
         // Get current time and format
