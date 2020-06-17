@@ -8,7 +8,8 @@ from libqtile.command import lazy
 
 mod = "mod4"
 terminal = "termite"
-defaultWebBrowser = "qutebrowser"
+defaultMinimalBrowser = "qutebrowser"
+defaultBrowser = "brave-browser"
 defaultFileManager = "pcmanfm"
 defaultEmailClient = "evolution"
 
@@ -71,8 +72,8 @@ keys = [
     Key([mod, "mod1"], "w", lazy.spawn("rofiweb"), desc="Run rofi web script"),
 
     # *** PROGRAM SHORTCUTS ***
-    Key([mod, "control"], "w", lazy.spawn(defaultWebBrowser), desc="Start web browser"),
-    Key([mod, "shift", "control"], "w", lazy.spawn("google-chrome"), desc="Start chrome"),
+    Key([mod, "control"], "w", lazy.spawn(defaultMinimalBrowser), desc="Start minimal web browser"),
+    Key([mod, "shift", "control"], "w", lazy.spawn(defaultBrowser), desc="Start non-minimal web browser"),
     Key([mod, "control"], "f", lazy.spawn(terminal + " -e 'vifm /home/ben'"), desc="vifm"),
     Key([mod, "shift", "control"], "f", lazy.spawn(defaultFileManager), desc="File manager"),
     Key([mod, "control"], "e", lazy.spawn(defaultEmailClient), desc="Start email client"),
