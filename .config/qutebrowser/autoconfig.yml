@@ -42,7 +42,7 @@ settings:
   tabs.show:
     global: always
   url.default_page:
-    global: ~/.config/qutebrowser/html/homepage.html
+    global: https://bcampus.github.io/
   url.incdec_segments:
     global:
     - path
@@ -51,7 +51,7 @@ settings:
     global:
       DEFAULT: https://www.ecosia.org/search?q={}
   url.start_pages:
-    global: ~/.config/qutebrowser/html/homepage.html
+    global: https://bcampus.github.io/
   url.yank_ignored_parameters:
     global:
     - ref
