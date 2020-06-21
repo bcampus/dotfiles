@@ -81,7 +81,7 @@ keys = [
     Key([mod, "control"], "f", lazy.spawn(terminal + " -e 'vifm /home/ben'"), desc="vifm"),
     Key([mod, "shift", "control"], "f", lazy.spawn(defaultFileManager), desc="File manager"),
     Key([mod, "control"], "e", lazy.spawn(defaultEmailClient), desc="Start email client"),
-    Key([mod, "control"], "h", lazy.spawn(terminal + " -e htop"), desc="Start htop"),
+    Key([mod, "control"], "h", lazy.spawn(terminal + " -e 'ytop -p'"), desc="Start ytop"),
     Key([mod, "control"], "r", lazy.spawn(terminal + " -e tuir"), desc="Start reddit"),
 ]
 
