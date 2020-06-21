@@ -39,6 +39,8 @@ settings:
     - '{file}'
   statusbar.hide:
     global: false
+  tabs.last_close:
+    global: close
   tabs.show:
     global: always
   url.default_page:

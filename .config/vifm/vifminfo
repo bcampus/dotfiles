@@ -21,14 +21,11 @@ al
 q1
 v2
 oh
-m56
+m15
 l2
 r2
 
 # Left window history (oldest to newest):
-d/home/ben
-	Documents
-2
 d/home/ben/Documents
 	ubuntu-20.04-live-server-amd64.iso
 1
@@ -326,6 +323,9 @@ d/home/ben/.config/qutebrowser
 d/home/ben/.config/qutebrowser/html
 	homepage.html
 1
+d/home/ben
+	.config
+4
 d
 
 # Right window history (oldest to newest):
