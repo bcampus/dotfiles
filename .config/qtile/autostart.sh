@@ -2,3 +2,4 @@
 picom &
 nitrogen --restore &
 urxvtd -q -o -f &
+pcmanfm -d &
