@@ -38,11 +38,11 @@ settings:
     - kakopen
     - '{file}'
   statusbar.hide:
-    global: false
+    global: true
   tabs.last_close:
     global: close
   tabs.show:
-    global: always
+    global: switching
   url.default_page:
     global: https://bcampus.github.io/
   url.incdec_segments:

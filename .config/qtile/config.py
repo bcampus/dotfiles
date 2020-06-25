@@ -52,6 +52,7 @@ keys = [
     # multiple stack panes
     # Terminal
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod, "control"], "Return", lazy.spawn("alacritty"), desc="Launch alacritty"),
 
     Key([mod, "shift"], "Return", lazy.spawn("rofi -show run"), desc="Show rofi run"),
     # Toggle between different layouts as defined below
@@ -79,6 +80,7 @@ keys = [
     Key([mod, "control"], "e", lazy.spawn(defaultEmailClient), desc="Start email client"),
     Key([mod, "control"], "h", lazy.spawn(terminal + " -e 'ytop -p'"), desc="Start ytop"),
     Key([mod, "control"], "r", lazy.spawn(terminal + " -e tuir"), desc="Start reddit"),
+    Key([mod, "control"], "s", lazy.spawn("rofi -show ssh"), desc="Rofi ssh"),
 ]
 
 groupNames = [("DEV", "1"),
